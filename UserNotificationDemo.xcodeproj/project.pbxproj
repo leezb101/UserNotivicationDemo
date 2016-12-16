@@ -300,6 +300,7 @@
 				F44205EA1E03C57D003D7062 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
