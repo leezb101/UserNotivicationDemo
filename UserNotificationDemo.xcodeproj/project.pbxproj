@@ -22,6 +22,7 @@
 		F44205E01E03C57D003D7062 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F44205E31E03C57D003D7062 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F44205E51E03C57D003D7062 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4EBA9951E30B8A100E87ACA /* UserNotificationDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UserNotificationDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		F44205D81E03C57D003D7062 /* UserNotificationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F4EBA9951E30B8A100E87ACA /* UserNotificationDemo.entitlements */,
 				F44205D91E03C57D003D7062 /* AppDelegate.swift */,
 				F44205DB1E03C57D003D7062 /* ViewController.swift */,
 				F44205DD1E03C57D003D7062 /* Main.storyboard */,
@@ -96,8 +98,16 @@
 				TargetAttributes = {
 					F44205D51E03C57D003D7062 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = AWN3A347S4;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = ULYERK6U66;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -259,11 +269,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = AWN3A347S4;
+				CODE_SIGN_ENTITLEMENTS = UserNotificationDemo/UserNotificationDemo.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ULYERK6U66;
 				INFOPLIST_FILE = UserNotificationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ZeluLi.UserNotificationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = zeluli.userNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c14d604f-3076-4991-8ba4-856fb4b9b966";
+				PROVISIONING_PROFILE_SPECIFIER = UserNotification;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,10 +288,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = AWN3A347S4;
+				CODE_SIGN_ENTITLEMENTS = UserNotificationDemo/UserNotificationDemo.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UserNotificationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ZeluLi.UserNotificationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = zeluli.userNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
